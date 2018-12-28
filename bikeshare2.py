@@ -42,18 +42,18 @@ def get_filters():
             print('you have selected', month)
             break
 
-    day = input('Which day would you like to see data for? Please select a day of the week, or type all.').lower()
+    day_of_week = input('Which day would you like to see data for? Please select a day of the week, or type all.').lower()
     while True:
-        if day not in ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
+        if day_of_week not in ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'):
             print('invalid input, please try again.')
-            day = input('Which day would you like to see data for? Please select a day of the week, or type all.').lower()
+            day_of_week = input('Which day would you like to see data for? Please select a day of the week, or type all.').lower()
         else:
-           print('you have selected', day)
-           return city, month, day 
+           print('you have selected', day_of_week)
+           return city, month, day_of_week 
 
 
 
-def load_data(city, month, day):
+def load_data(city, month, day_of_week):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -170,12 +170,14 @@ def user_stats(df):
     else:
         print('Sorry, there is no birthday information available for this region.')
 
+
     raw_user_data = input('would you like to see raw user data? Please select yes or no.').lower()
         """provides 5 randomdata points at a time upon user request"""
+
     while True:
-            if raw_user_data == 'yes':
+            if raw_bikeshare_data == 'yes':
                 print(df.sample(5))
-                raw_user_data = input('would you like to see more raw user data? Type yes for more data.').lower()
+                raw_bikeshare_data = input('would you like to see more raw user data? Type yes for more data.').lower()
             else:
                 print('input received.')
                 break
@@ -187,8 +189,8 @@ def user_stats(df):
 
 def main():
     while True:
-        city, month, day = get_filters()
-        df = load_data(city, month, day)
+        city, month, day_of_week = get_filters()
+        df = load_data(city, month, day_of_week)
 
         time_stats(df)
         station_stats(df)
