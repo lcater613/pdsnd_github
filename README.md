@@ -5,7 +5,7 @@ Date created: 12/28/2018
 bikeshare2
 
 ### Description
-this program lists user-selected data by city and date. Information provided ranges from bike usage data to user ages.
+this program lists bikeshare data for Washington, New York City, and Chicago. It allows the user to select their city, then filter data by month and day of the week.
 
 ### Files used
 bikeshare2.py
