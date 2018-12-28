@@ -170,11 +170,11 @@ def user_stats(df):
     else:
         print('Sorry, there is no birthday information available for this region.')
 
-    raw_user_data = input('would you like to see raw user data? Please select yes or no.').lower()
+    raw_bikeshare_data = input('would you like to see raw user data? Please select yes or no.').lower()
     while True:
-            if raw_user_data == 'yes':
+            if raw_bikeshare_data == 'yes':
                 print(df.sample(5))
-                raw_user_data = input('would you like to see more raw user data? Type yes for more data.').lower()
+                raw_bikeshare_data = input('would you like to see more raw user data? Type yes for more data.').lower()
             else:
                 print('input received.')
                 break
