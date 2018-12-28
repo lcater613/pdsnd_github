@@ -171,6 +171,7 @@ def user_stats(df):
         print('Sorry, there is no birthday information available for this region.')
 
     raw_user_data = input('would you like to see raw user data? Please select yes or no.').lower()
+        """provides 5 randomdata points at a time upon user request"""
     while True:
             if raw_user_data == 'yes':
                 print(df.sample(5))

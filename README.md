@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+Date created: 12/28/2018
 
 ### Project Title
-Replace the Project Title
+bikeshare2
 
 ### Description
-Describe what your project is about and what it does
+this program lists bikeshare data for Washington, New York City, and Chicago. This program allows the user to select their city, then filter data by month and day of the week.
 
 ### Files used
-Include the files used
+bikeshare2.py
+washington.csv
+new_york_city.csv
+chicago.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+N/A
 
